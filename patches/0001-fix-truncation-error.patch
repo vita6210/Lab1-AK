@@ -1,0 +1,26 @@
+From dd32f702788b27178b8510cf1ae4a7caceb13fe9 Mon Sep 17 00:00:00 2001
+From: Sergii Piatakov <sergii.piatakov@globallogic.com>
+Date: Thu, 15 Nov 2018 15:28:04 +0200
+Subject: [PATCH 1/2] fix truncation error
+
+---
+ calculator.cpp | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/calculator.cpp b/calculator.cpp
+index b91afea..ad9ff06 100644
+--- a/calculator.cpp
++++ b/calculator.cpp
+@@ -2,7 +2,9 @@
+ 
+ int Calculator::Add (double a, double b)
+ {
++
+     return a + b;
++	return a + b + 0.5;
+ }
+ 
+ int Calculator::Sub (double a, double b)
+-- 
+2.33.1.windows.1
+
